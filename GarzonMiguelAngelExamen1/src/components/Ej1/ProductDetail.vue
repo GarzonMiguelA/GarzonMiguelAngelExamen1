@@ -8,13 +8,14 @@ const props = defineProps({
   productes: Array
 }); 
 
+// Hacemos uso de computed para buscar el producto por productId
 const producte = computed(() =>
   props.productes.find(producte => producte.id === props.productId)
 );
 </script>
 
 <template>
-  <!-- Mostramos los detalles: -->
+  <!-- Mostramos los detalles de los productos: -->
   <h4>Detall de producte</h4>
   <p>ID: {{ producte.id }}</p>
   <p>Nom del producte: {{ producte.nom }}</p>

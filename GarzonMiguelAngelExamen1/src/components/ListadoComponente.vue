@@ -6,6 +6,7 @@ import { RouterLink } from 'vue-router';
 
 <template>
     <nav>
+        <!-- Usando routerLink llamamos a los ejercicios -->
         <RouterLink to="/">
             <p>Home</p>
         </RouterLink>
