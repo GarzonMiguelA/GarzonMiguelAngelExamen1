@@ -18,6 +18,11 @@ const routes = [
     path: '/exercici2',
     name: 'exercici2',
     component: () => import('@/components/Ej2/Counter.vue'),
+  },
+  {
+    path: '/exercici3',
+    name: 'exercici3',
+    component: () => import('@/components/Ej3/UserList.vue'),
   }
 ];
 
