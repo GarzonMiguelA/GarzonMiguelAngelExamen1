@@ -1,4 +1,6 @@
 <script setup>
+import { RouterLink } from 'vue-router';
+
 const productes = [
   { id: 1, nom: 'Producte 1', descripció: 'Descripció del producte 1' },
   { id: 2, nom: 'Producte 2', descripció: 'Descripció del producte 2' },
@@ -9,14 +11,13 @@ const productes = [
 <template>
   <div>
     <h1>Llistat de Productes</h1>
-    <RouterLink :to="'/'">
-        Tornar a exercicis
-    </RouterLink>
     <ul>
       <li v-for="producte in productes" :key="producte.id">
-        <h2>{{ producte.nom }}</h2>
-        <p>{{ producte.descripció }}</p>
+        <RouterLink :to="`/exercici1/${producte.id}`">
+          <h3>{{ producte.nom }}</h3>
+        </RouterLink>
       </li>
     </ul>
+    <router-view :productes="productes"></router-view>
   </div>
 </template>
