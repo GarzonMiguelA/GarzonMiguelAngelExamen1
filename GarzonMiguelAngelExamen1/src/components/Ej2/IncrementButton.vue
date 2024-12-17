@@ -5,5 +5,5 @@ const increment = inject('increment');
 </script>
 
 <template>
-  <button @click="increment">Incrementar</button>
+  <button @click="increment">+1</button>
 </template>

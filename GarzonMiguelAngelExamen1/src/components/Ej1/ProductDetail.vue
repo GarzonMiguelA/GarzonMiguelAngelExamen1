@@ -3,21 +3,25 @@ import { computed } from 'vue';
 import { defineProps } from 'vue';
 
 const props = defineProps({
-  productId: Number,
+  productId: parseInt,
   productes: Array
 });
 
+//Recibimos el array de productos como prop
+/* const props = defineProps({
+  products:{
+    type:Array,
+    required: true,
+  } 
+}) */
 const producte = computed(() => {
   return props.productes.find(producte => producte.id === props.productId);
 });
 </script>
 
 <template>
-  <div v-if="producte">
-    <h2>{{ producte.nom }}</h2>
-    <p>{{ producte.descripció }}</p>
-  </div>
-  <div v-else>
-    <p>Producte no trobat</p>
-  </div>
+  <h4>Detall de la descripció</h4>
+  <p>ID: {{ producte.id }}</p>
+  <p>Nom del producte: {{ producte.nom }}</p>
+  <p>Descripció: {{ producte.descripció }}</p>
 </template>

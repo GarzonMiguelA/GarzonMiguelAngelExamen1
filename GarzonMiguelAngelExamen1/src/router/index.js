@@ -1,12 +1,10 @@
 import { createRouter, createWebHistory } from 'vue-router';
-import ListadoProductos from '@/components/Ej1/ListadoProductos.vue';
-import ProductDetail from '@/components/Ej1/ProductDetail.vue';
 
 const routes = [
   {
     path: '/exercici1',
     name: 'exercici1',
-    component: () => import('@/components/Ej1/ListadoProductos.vue'),
+    component: () => import('@/components/Ej1/ProductList.vue'),
     children: [
       {
         path: ':productId',

@@ -5,5 +5,5 @@ const decrement = inject('decrement');
 </script>
 
 <template>
-  <button @click="decrement">Restar</button>
+  <button @click="decrement">-1</button>
 </template>

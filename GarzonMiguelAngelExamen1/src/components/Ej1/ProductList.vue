@@ -1,11 +1,13 @@
 <script setup>
-import { RouterLink } from 'vue-router';
+import { RouterLink, useRouter } from 'vue-router';
 
 const productes = [
   { id: 1, nom: 'Producte 1', descripció: 'Descripció del producte 1' },
   { id: 2, nom: 'Producte 2', descripció: 'Descripció del producte 2' },
   { id: 3, nom: 'Producte 3', descripció: 'Descripció del producte 3' }
 ];
+
+const router = useRouter();
 </script>
 
 <template>
@@ -20,4 +22,4 @@ const productes = [
     </ul>
     <router-view :productes="productes"></router-view>
   </div>
-</template>
+</template> 
